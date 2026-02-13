@@ -1,3 +1,26 @@
+let holdTimer;
+
+function startHold() {
+    const btn = document.querySelector(".hold-btn");
+
+    holdTimer = setTimeout(() => {
+        btn.classList.add("flip");
+
+        const msg = document.getElementById("holdMessage");
+        msg.classList.add("show");
+
+        setTimeout(() => {
+            msg.classList.remove("show");
+            btn.classList.remove("flip");
+        }, 5000);
+
+    }, 800); // hold duration
+}
+
+function endHold() {
+    clearTimeout(holdTimer);
+}
+
 function openLetter() {
     document.getElementById("paper").style.display = "block";
 
@@ -9,14 +32,3 @@ function openLetter() {
     cd.classList.add("playing");
     music.play();
 }
-
-function showSecret(message) {
-    const note = document.getElementById("secretNote");
-    note.innerHTML = message;
-    note.classList.add("show");
-
-    setTimeout(() => {
-        note.classList.remove("show");
-    }, 5000);
-}
-
