@@ -1,16 +1,82 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #000000, #001f4d);
-    color: white;
     text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #1a1a40, #0d47a1);
+    background-attachment: fixed;
 }
 
 .container {
     padding: 20px;
 }
 
-/* HOLD BUTTON */
+/* Envelope */
+.envelope {
+    font-size: 50px;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: transform 0.3s;
+}
+
+.envelope:hover {
+    transform: scale(1.1);
+}
+
+/* Letter */
+.paper {
+    display: none;
+    background: white;
+    color: black;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 90%;
+    line-height: 1.6;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* CD */
+.cd-container {
+    display: none;
+    margin-top: 20px;
+}
+
+.cd-container.show {
+    display: block;
+}
+
+.cd {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.cd.playing {
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Gallery */
+.gallery {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* Hold Button */
 .hold-btn {
     position: fixed;
     bottom: 20px;
@@ -19,17 +85,15 @@ body {
     background: #0d47a1;
     padding: 12px 22px;
     border-radius: 25px;
-    font-size: 16px;
+    font-size: 15px;
     cursor: pointer;
     transition: transform 0.6s;
 }
 
-/* Flip animation */
 .hold-btn.flip {
     transform: translateX(-50%) rotateY(180deg);
 }
 
-/* Message */
 .hold-message {
     position: fixed;
     bottom: 70px;
