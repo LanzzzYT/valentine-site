@@ -129,6 +129,46 @@ h1 {
     color: #90caf9;
 }
 
+/* Secret Button */
+.secret-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #0d47a1;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(144,202,249,0.6);
+    transition: transform 0.3s;
+}
+
+.secret-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Hidden Love Note */
+.secret-note {
+    position: fixed;
+    bottom: 70px;
+    left: 20px;
+    max-width: 200px;
+    background: rgba(13,71,161,0.9);
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+}
+
+.secret-note.show {
+    opacity: 1;
+}
+
 /* Animation */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
