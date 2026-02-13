@@ -1,5 +1,20 @@
 let holdTimer;
 
+function openLetter() {
+    document.getElementById("paper").style.display = "block";
+
+    const cdBox = document.getElementById("cdContainer");
+    const cd = document.getElementById("cd");
+    const music = document.getElementById("bgMusic");
+
+    cdBox.classList.add("show");
+    cd.classList.add("playing");
+
+    music.play().catch(() => {
+        alert("Tap screen ulit baby 😌 (browser autoplay protection)");
+    });
+}
+
 function startHold() {
     const btn = document.querySelector(".hold-btn");
 
@@ -14,21 +29,9 @@ function startHold() {
             btn.classList.remove("flip");
         }, 5000);
 
-    }, 800); // hold duration
+    }, 800);
 }
 
 function endHold() {
     clearTimeout(holdTimer);
-}
-
-function openLetter() {
-    document.getElementById("paper").style.display = "block";
-
-    const cdBox = document.getElementById("cdContainer");
-    const cd = document.getElementById("cd");
-    const music = document.getElementById("bgMusic");
-
-    cdBox.classList.add("show");
-    cd.classList.add("playing");
-    music.play();
 }
