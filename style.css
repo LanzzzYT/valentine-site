@@ -10,137 +10,39 @@ body {
     padding: 20px;
 }
 
-/* Heading */
-h1 {
-    color: #90caf9;
-    font-size: 22px;
-    margin-bottom: 30px;
-}
-
-/* Envelope */
-.envelope {
-    width: 80%;
-    max-width: 320px;
-    height: 150px;
-    background: #0d47a1;
-    margin: 20px auto;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.flap {
-    width: 0;
-    height: 0;
-    border-left: 160px solid transparent;
-    border-right: 160px solid transparent;
-    border-bottom: 80px solid #1565c0;
-    position: absolute;
-    top: -80px;
-}
-
-.letter-preview {
-    padding-top: 55px;
-    font-size: 16px;
-}
-
-/* Paper */
-.paper {
-    display: none;
-    background: #f5f5f5;
-    color: #000;
-    padding: 20px;
-    border-radius: 10px;
-    border: 6px solid #0d47a1;
-    max-width: 90%;
-    margin: 20px auto;
-    line-height: 1.6;
-    font-size: 14px;
-    animation: fadeIn 1s;
-}
-
-/* CD */
-.cd-container {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    width: 55px;
-    display: none;
-    opacity: 0;
-}
-
-.cd-container.show {
-    display: block;
-    opacity: 1;
-}
-
-.cd {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-}
-
-.cd.playing {
-    animation: spin 3s linear infinite;
-}
-
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-/* Gallery */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.gallery img {
-    width: 40%;
-    max-width: 140px;
-    margin: 6px;
-    border-radius: 10px;
-}
-
-/* Quotes */
-.quotes {
-    font-size: 14px;
-    color: #90caf9;
-}
-
-/* Secret Buttons */
-.secret-btn {
+/* HOLD BUTTON */
+.hold-btn {
     position: fixed;
     bottom: 20px;
-    left: 10px;
+    left: 50%;
+    transform: translateX(-50%);
     background: #0d47a1;
-    padding: 8px;
-    border-radius: 50%;
+    padding: 12px 22px;
+    border-radius: 25px;
+    font-size: 16px;
     cursor: pointer;
+    transition: transform 0.6s;
 }
 
-.secret-btn2 { left: 60px; }
-.secret-btn3 { left: 110px; }
-.secret-btn4 { left: 160px; }
+/* Flip animation */
+.hold-btn.flip {
+    transform: translateX(-50%) rotateY(180deg);
+}
 
-/* Secret Note */
-.secret-note {
+/* Message */
+.hold-message {
     position: fixed;
-    bottom: 65px;
-    left: 15px;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
     background: rgba(13,71,161,0.95);
-    padding: 12px;
-    border-radius: 10px;
-    font-size: 13px;
+    padding: 12px 18px;
+    border-radius: 15px;
+    font-size: 14px;
     opacity: 0;
     transition: opacity 0.5s;
 }
 
-.secret-note.show {
+.hold-message.show {
     opacity: 1;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(5px); }
-    to { opacity: 1; transform: translateY(0); }
 }
