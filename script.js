@@ -1,15 +1,16 @@
-function playMusic() {
+function openLetter() {
+    const paper = document.getElementById("paper");
+    const cdContainer = document.getElementById("cdContainer");
     const music = document.getElementById("bgMusic");
     const cd = document.getElementById("cd");
 
-    music.play().catch(() => {
-        console.log("Music autoplay blocked until user interacts.");
-    });
-
-    cd.classList.add("playing"); // start rotating
-}
-
-function openLetter() {
-    const paper = document.getElementById("paper");
+    // Show paper
     paper.style.display = "block";
+
+    // Show CD with fade in
+    cdContainer.classList.add("show");
+
+    // Play music & rotate CD
+    music.play().catch(() => console.log("Music blocked until interaction."));
+    cd.classList.add("playing");
 }
