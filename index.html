@@ -11,16 +11,6 @@
 
     <h1>For My Love 💙</h1>
 
-    <!-- CD Music Player -->
-    <div class="cd-container" onclick="playMusic()">
-        <img src="cd.png" class="cd" id="cd">
-        <p>💙 Click CD to Play Music 💙</p>
-    </div>
-
-    <audio id="bgMusic" loop>
-        <source src="music.mp3" type="audio/mpeg">
-    </audio>
-
     <!-- Envelope -->
     <div class="envelope" onclick="openLetter()">
         <div class="flap"></div>
@@ -32,7 +22,6 @@
     <!-- Long Letter Paper -->
     <div class="paper" id="paper">
         <h2>My Love 💙</h2>
-
         <p>
             Happy Valentine’s Day, my love 💙 <br><br>
             I just want you to know how grateful I am to have you in my life.
@@ -53,6 +42,16 @@
             I love you more than words can explain. 💙
         </p>
     </div>
+
+    <!-- CD Music Player (hidden initially) -->
+    <div class="cd-container fade" id="cdContainer">
+        <img src="cd.png" class="cd" id="cd">
+        <p>💙 Now Playing 💙</p>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
 
     <!-- Gallery -->
     <div class="gallery">
