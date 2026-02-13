@@ -7,11 +7,38 @@ body {
 }
 
 .container {
-    padding: 40px;
+    padding: 60px 40px;
 }
 
+/* Heading */
 h1 {
     color: #90caf9;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 2;
+}
+
+/* CD Player */
+.cd-container {
+    margin: 30px auto;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cd {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.cd.playing {
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 /* Envelope */
@@ -24,6 +51,7 @@ h1 {
     cursor: pointer;
     border-radius: 10px;
     transition: transform 0.5s;
+    z-index: 1;
 }
 
 .envelope:hover {
