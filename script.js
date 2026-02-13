@@ -16,8 +16,9 @@ function openLetter() {
 }
 
 // Secret love note function
-function showSecret() {
+function showSecret(message) {
     const note = document.getElementById("secretNote");
+    note.innerHTML = message;
     note.classList.add("show");
 
     // Fade out after 5 seconds
