@@ -8,6 +8,7 @@ body {
 
 .container {
     padding: 60px 40px;
+    position: relative;
 }
 
 /* Heading */
@@ -70,19 +71,25 @@ h1 {
     color: #0d47a1;
 }
 
-/* CD Player */
-.cd-container {
-    margin: 40px auto;
-    text-align: center;
-    cursor: pointer;
-    display: none; /* hidden initially */
+/* CD Sidebar */
+.cd-sidebar {
+    position: fixed;
+    top: 150px;
+    right: 20px;
+    width: 180px;
+    background: rgba(13, 71, 161, 0.8);
+    padding: 15px;
+    border-radius: 15px;
+    display: none;
     opacity: 0;
-    transition: opacity 1s;
+    text-align: center;
+    color: #fff;
 }
 
-.cd-container.show {
+.cd-sidebar.show {
     display: block;
     opacity: 1;
+    transition: opacity 1s;
 }
 
 .cd {
