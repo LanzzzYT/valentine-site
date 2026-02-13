@@ -79,7 +79,7 @@ body {
 /* Hold Button */
 .hold-btn {
     position: fixed;
-    bottom: 20px;
+    bottom: 70px;
     left: 50%;
     transform: translateX(-50%);
     background: #0d47a1;
@@ -87,16 +87,12 @@ body {
     border-radius: 25px;
     font-size: 15px;
     cursor: pointer;
-    transition: transform 0.6s;
 }
 
-.hold-btn.flip {
-    transform: translateX(-50%) rotateY(180deg);
-}
-
+/* Hold Message */
 .hold-message {
     position: fixed;
-    bottom: 70px;
+    bottom: 120px;
     left: 50%;
     transform: translateX(-50%);
     background: rgba(13,71,161,0.95);
@@ -108,5 +104,43 @@ body {
 }
 
 .hold-message.show {
+    opacity: 1;
+}
+
+/* Secret Buttons */
+.secret-buttons {
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.secret-buttons button {
+    background: #0d47a1;
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Secret Popup */
+.secret-popup {
+    position: fixed;
+    bottom: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.85);
+    padding: 10px 16px;
+    border-radius: 15px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.secret-popup.show {
     opacity: 1;
 }
