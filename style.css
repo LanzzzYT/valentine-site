@@ -68,3 +68,69 @@ h1 {
 }
 
 .paper h2 {
+    color: #0d47a1;
+}
+
+/* CD Player small top-right */
+.cd-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 80px;
+    display: none;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.cd-container.show {
+    display: block;
+    opacity: 1;
+}
+
+.cd {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.cd.playing {
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Gallery */
+.gallery {
+    margin-top: 40px;
+}
+
+.gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 15px;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #90caf9;
+}
+
+/* Quotes */
+.quotes {
+    margin-top: 30px;
+    font-style: italic;
+    color: #90caf9;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
