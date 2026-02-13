@@ -11,22 +11,17 @@ function openLetter() {
     cd.classList.add("playing");
 
     music.play().catch(() => {
-        alert("Tap screen ulit baby 😌 (browser autoplay protection)");
+        alert("Tap ulit baby 😌");
     });
 }
 
 function startHold() {
-    const btn = document.querySelector(".hold-btn");
-
     holdTimer = setTimeout(() => {
-        btn.classList.add("flip");
-
         const msg = document.getElementById("holdMessage");
         msg.classList.add("show");
 
         setTimeout(() => {
             msg.classList.remove("show");
-            btn.classList.remove("flip");
         }, 5000);
 
     }, 800);
@@ -34,4 +29,15 @@ function startHold() {
 
 function endHold() {
     clearTimeout(holdTimer);
+}
+
+/* Secret Popup */
+function showSecret(text) {
+    const popup = document.getElementById("secretPopup");
+    popup.innerText = text;
+    popup.classList.add("show");
+
+    setTimeout(() => {
+        popup.classList.remove("show");
+    }, 3000);
 }
