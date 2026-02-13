@@ -1,10 +1,10 @@
 function openLetter() {
-    const letter = document.querySelector(".letter");
+    const paper = document.getElementById("paper");
     const music = document.getElementById("bgMusic");
 
-    letter.style.display = "block";
+    paper.style.display = "block";
 
     music.play().catch(() => {
-        console.log("Autoplay blocked until user interacts.");
+        console.log("Music autoplay blocked.");
     });
 }
