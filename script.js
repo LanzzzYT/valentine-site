@@ -1,10 +1,15 @@
-function openLetter() {
-    const paper = document.getElementById("paper");
+function playMusic() {
     const music = document.getElementById("bgMusic");
-
-    paper.style.display = "block";
+    const cd = document.getElementById("cd");
 
     music.play().catch(() => {
-        console.log("Music autoplay blocked.");
+        console.log("Music autoplay blocked until user interacts.");
     });
+
+    cd.classList.add("playing"); // start rotating
+}
+
+function openLetter() {
+    const paper = document.getElementById("paper");
+    paper.style.display = "block";
 }
