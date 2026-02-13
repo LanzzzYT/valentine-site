@@ -7,71 +7,70 @@
 </head>
 <body>
 
-    <!-- Background Music -->
+<div class="container">
+
+    <h1>For My Love 💙</h1>
+
+    <!-- CD Music Player -->
+    <div class="cd-container" onclick="playMusic()">
+        <img src="cd.png" class="cd" id="cd">
+        <p>💙 Click CD to Play Music 💙</p>
+    </div>
+
     <audio id="bgMusic" loop>
         <source src="music.mp3" type="audio/mpeg">
     </audio>
 
-    <div class="container">
-
-        <h1>For My Love 💙</h1>
-
-        <!-- Envelope -->
-        <div class="envelope" onclick="openLetter()">
-            <div class="flap"></div>
-            <div class="letter-preview">
-                💌 Click to Open My Letter 💙
-            </div>
+    <!-- Envelope -->
+    <div class="envelope" onclick="openLetter()">
+        <div class="flap"></div>
+        <div class="letter-preview">
+            💌 Click to Open My Letter 💙
         </div>
-
-        <!-- Long Letter Paper -->
-        <div class="paper" id="paper">
-            <h2>My Love 💙</h2>
-
-            <p>
-                Happy Valentine’s Day, my love 💙 <br><br>
-
-                I just want you to know how grateful I am to have you in my life.
-                Every day with you feels special, comforting, and full of happiness.
-                You are my safe place, my peace, and my greatest blessing. <br><br>
-
-                Thank you for loving me, for understanding me,
-                and for staying by my side through everything.
-                You make my world brighter in ways you can’t even imagine. <br><br>
-
-                With you, simple moments become unforgettable memories.
-                Your smile, your voice, your presence —
-                they all mean so much to me. <br><br>
-
-                I may not always say it perfectly,
-                but please remember that I love you deeply and sincerely.
-                You are my today, my tomorrow, and my forever. 💙 <br><br>
-
-                No matter where life takes us,
-                I promise to cherish you, support you,
-                and love you with all my heart. <br><br>
-
-                I love you more than words can explain. 💙
-            </p>
-        </div>
-
-        <!-- Gallery -->
-        <div class="gallery">
-            <img src="pic1.jpg">
-            <img src="pic2.jpg">
-            <img src="pic3.jpg">
-            <img src="pic4.jpg">
-        </div>
-
-        <!-- Quotes -->
-        <div class="quotes">
-            <p>"Every love story is beautiful, but ours is my favorite."</p>
-            <p>"With you, every moment feels magical."</p>
-            <p>"You are my today and all of my tomorrows."</p>
-            <p>"Forever grateful for you 💙"</p>
-        </div>
-
     </div>
+
+    <!-- Long Letter Paper -->
+    <div class="paper" id="paper">
+        <h2>My Love 💙</h2>
+
+        <p>
+            Happy Valentine’s Day, my love 💙 <br><br>
+            I just want you to know how grateful I am to have you in my life.
+            Every day with you feels special, comforting, and full of happiness.
+            You are my safe place, my peace, and my greatest blessing. <br><br>
+            Thank you for loving me, for understanding me,
+            and for staying by my side through everything.
+            You make my world brighter in ways you can’t even imagine. <br><br>
+            With you, simple moments become unforgettable memories.
+            Your smile, your voice, your presence —
+            they all mean so much to me. <br><br>
+            I may not always say it perfectly,
+            but please remember that I love you deeply and sincerely.
+            You are my today, my tomorrow, and my forever. 💙 <br><br>
+            No matter where life takes us,
+            I promise to cherish you, support you,
+            and love you with all my heart. <br><br>
+            I love you more than words can explain. 💙
+        </p>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery">
+        <img src="pic1.jpg">
+        <img src="pic2.jpg">
+        <img src="pic3.jpg">
+        <img src="pic4.jpg">
+    </div>
+
+    <!-- Quotes -->
+    <div class="quotes">
+        <p>"Every love story is beautiful, but ours is my favorite."</p>
+        <p>"With you, every moment feels magical."</p>
+        <p>"You are my today and all of my tomorrows."</p>
+        <p>"Forever grateful for you 💙"</p>
+    </div>
+
+</div>
 
 <script src="script.js"></script>
 </body>
