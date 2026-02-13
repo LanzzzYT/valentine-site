@@ -1,28 +1,22 @@
 function openLetter() {
-    const paper = document.getElementById("paper");
-    const cdContainer = document.getElementById("cdContainer");
-    const music = document.getElementById("bgMusic");
+    document.getElementById("paper").style.display = "block";
+
+    const cdBox = document.getElementById("cdContainer");
     const cd = document.getElementById("cd");
+    const music = document.getElementById("bgMusic");
 
-    // Show paper
-    paper.style.display = "block";
-
-    // Show CD small top-right
-    cdContainer.classList.add("show");
-
-    // Play music & rotate CD
-    music.play().catch(() => console.log("Music blocked until interaction."));
+    cdBox.classList.add("show");
     cd.classList.add("playing");
+    music.play();
 }
 
-// Secret love note function
 function showSecret(message) {
     const note = document.getElementById("secretNote");
     note.innerHTML = message;
     note.classList.add("show");
 
-    // Fade out after 5 seconds
     setTimeout(() => {
         note.classList.remove("show");
     }, 5000);
 }
+
