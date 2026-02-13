@@ -7,7 +7,7 @@ function openLetter() {
     // Show paper
     paper.style.display = "block";
 
-    // Show CD sidebar with fade in
+    // Show CD small top-right
     cdContainer.classList.add("show");
 
     // Play music & rotate CD
